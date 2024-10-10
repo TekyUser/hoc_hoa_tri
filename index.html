@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Học Hóa Trị</title>
+    </head>
+    <style>
+                /* Toàn bộ trang */
+        body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #89fffd, #ef32d9);
+        color: #333;
+        padding: 20px;
+        }
+
+        /* Tiêu đề chính */
+        h1 {
+        color: #fff;
+        font-size: 2.2em;
+        margin: 10px 0 20px 0;
+        text-align: center;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Phần hiển thị nguyên tố */
+        #elementName {
+        font-weight: bold;
+        font-size: 1.7em;
+        color: #ffeb3b;
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 20px;
+        }
+
+        /* Ô nhập liệu */
+        input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+        font-size: 1.2em;
+        border: 2px solid #ffeb3b;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        margin-top: 10px;
+        }
+
+        input[type="text"]:focus {
+        border-color: #fff;
+        box-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+        }
+
+        /* Nút kiểm tra */
+        button {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 1.2em;
+        color: #fff;
+        background-color: #ff4081;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Kết quả */
+        #result {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #ffeb3b;
+        margin-top: 15px;
+        text-align: center;
+        }
+
+        /* Hiệu ứng chuyển tiếp và bố cục */
+        * {
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        }
+
+        /* Media Queries cho di động */
+        @media (max-width: 600px) {
+        h1 {
+            font-size: 1.8em;
+        }
+        input[type="text"] {
+            font-size: 1.1em;
+            padding: 12px;
+        }
+        button {
+            font-size: 1.1em;
+            padding: 12px;
+        }
+        #result {
+            font-size: 1.1em;
+        }
+        }
+    </style>
+    <body>
+        <h1>Học Thuộc Hóa Trị Các Nguyên Tố</h1>
+        <p>Nguyên tố: <span id="elementName"></span></p>
+        <input type="text" id="userInput" placeholder="Nhập hóa trị của nguyên tố">
+        <button onclick="checkAnswer()">Kiểm tra</button>
+        <p id="result"></p>
+      
+        <script src="main.js"></script>
+    </body>
+</html>
